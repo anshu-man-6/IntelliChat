@@ -13,6 +13,14 @@ dotenv.config();
 const port =3000;
 app.use(express.json());
 app.use(cors());
+import cors from "cors";
+
+app.use(
+  cors({
+    origin:
+      "https://intellichat.onrender.com",
+  })
+);
 
 
 
