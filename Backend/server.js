@@ -14,15 +14,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://intellichat-1-ksmx.onrender.com",
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // Routes
 app.use("/api", chatRoute);
