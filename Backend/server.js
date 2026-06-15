@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 import connectDB from "./utils/Databaseconn.js";
 import chatRoute from "./routes/chat.js";
-import aiRoute from "./utils/openai.js";
+
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ app.use(cors());
 
 // Routes
 app.use("/api", chatRoute);
-app.use("/ai", aiRoute);
+
 
 // Start server
 app.listen(PORT, async () => {

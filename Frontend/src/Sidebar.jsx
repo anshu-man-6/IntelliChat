@@ -19,7 +19,7 @@ function Sidebar() {
   const getAllThreads = async () => {
     try {
       const response = await fetch(
-        "https://intellichat-api.onrender.com/api/thread"
+        "https://intellichat-9e3p.onrender.com/api/thread"
       );
 
       if (!response.ok) {
@@ -57,7 +57,7 @@ function Sidebar() {
   const changeThread = async (threadId) => {
     try {
       const response = await fetch(
-        `https://intellichat-api.onrender.com/api/thread/${threadId}`
+        `https://intellichat-9e3p.onrender.com/api/thread/${threadId}`
       );
 
       if (!response.ok) {
@@ -121,7 +121,7 @@ function Sidebar() {
     const id = thread.threadId;
 
     const response = await fetch(
-      `https://intellichat-api.onrender.com/api/thread/${id}`,
+      `https://intellichat-9e3p.onrender.com/api/thread/${id}`,
       {
         method: "DELETE",
       }
