@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
 
+
 function Sidebar() {
   const {
     allthreads,
@@ -85,8 +86,8 @@ function Sidebar() {
         onClick={createNewChat}
       >
         <img
-          src="src/assets/intellichatai_logo.jpg"
-          alt="SigmaGPT Logo"
+          src="/intellichatai_logo.jpg"
+          alt="IntelliChat Logo"
           className="logo"
         />
 
