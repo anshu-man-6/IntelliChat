@@ -1,13 +1,49 @@
 .chatWindow {
   background-color: #212121;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
   text-align: center;
+}
+
+/* Ensure main content grows and centers */
+.chatWindow .content {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+  padding: 12px 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+}
+
+.chatInput {
+  width: 100%;
+  max-width: 900px;
+  padding: 12px 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.02) inset;
+  position: sticky;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .chatWindow { min-height: auto; padding-bottom: 20px; }
+  .userInput { padding: 0 1rem; }
+  input { padding: 12px; font-size: 0.95rem; }
 }
 
 .navbar {

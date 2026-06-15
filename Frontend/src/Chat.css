@@ -1,10 +1,46 @@
 .chats {
   width: 100%;
-  max-width: 700px;
-  height: 70vh;
+ max-width: 900px;
+ height: calc(100vh - 200px);
+ overflow-y: auto;
+ padding: 2rem;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+}
+/* scrollbar thumb */
+.chats::-webkit-scrollbar { width: 10px; }
+.chats::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 10px; }
 
-  overflow-y: auto;
-  padding: 2rem;
+@media (max-width: 700px) {
+ .chats {
+   padding: 1rem;
+   height: calc(100vh - 160px);
+ }
+ .usermessage, .gptmessage { max-width: 90%; word-break: break-word; }
+ .usermessage { padding: 8px 12px; border-radius: 12px; }
+}
+
+/* Message bubbles */
+.usermessage {
+ background-color: #323232;
+ padding: 10px 18px;
+ border-radius: 14px;
+ max-width: 75%;
+ width: fit-content;
+ text-align: left;
+ word-break: break-word;
+}
+
+.gptmessage {
+ background: linear-gradient(90deg, rgba(50,50,50,0.9), rgba(40,40,40,0.9));
+ padding: 10px 16px;
+ border-radius: 14px;
+ max-width: 75%;
+ width: fit-content;
+ text-align: left;
+ word-break: break-word;
 }
 
 /* Hide scrollbar */

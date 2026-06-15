@@ -15,6 +15,29 @@ body{
 .main{
   background-color: #212121;
   display: flex;
+  min-height: 100vh;
+}
+
+/* Responsive layout: stack on small screens */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+  .chatWindow {
+    width: 100%;
+  }
+}
+@media (min-width: 901px) {
+  .sidebar {
+    flex: 0 0 320px;
+  }
+  .chatWindow {
+    flex: 1 1 auto;
+  }
 }
 
 
