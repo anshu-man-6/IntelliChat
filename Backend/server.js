@@ -17,9 +17,9 @@ app.use(express.json());
 app.use(cors());
 
 //default routes
-app.get("/",(req,res)=>{
-   res.statusCode(200).json({message:"Ok,all thigns are right"});
-})
+app.get("/", (req, res) => {
+  res.json({ message: "Ok, all things are right" });
+});
 
 // Routes
 app.use("/api", chatRoute);
